@@ -34,7 +34,7 @@ example output
 echo "YWNjZXNza2V5OiBleGFtcGxlLWFjY2VzcyBrZXkgIHNlY3JldGtleTogZXhhbXBsZS1zZWNyZXQta2V5Cg==" | base64 -d
 accesskey: example-access key  secretkey: example-secret-key
 ```
-'
+
 ## Understanding Indirect PPE
 
 Indirect PPE (I-PPE): In certain cases, the possibility of D-PPE is not available to an adversary with access to an SCM repository:
