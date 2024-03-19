@@ -53,4 +53,6 @@ In such a scenario, the attacker can still poison the pipeline by injecting mali
 Now, the scenario is - we cannot directly push into main branch, it will be protected, we have to find other ways to inject the malicious code.
 
 ![i-ppe](img/i-ppe.jpg)
+
 ## Execute Indirect-PPE 
+
