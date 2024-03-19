@@ -23,6 +23,7 @@ echo "accesskey: ${{ env.AWS_ACCESS_KEY_ID }}  secretkey: ${{ secrets.AWS_SECRET
 
 ```
 echo "<ENCODED_SECRETS>" | base64 -d
+```
 
 example
 ```
