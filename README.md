@@ -37,6 +37,9 @@ echo "YWNjZXNza2V5OiBleGFtcGxlLWFjY2VzcyBrZXkgIHNlY3JldGtleTogZXhhbXBsZS1zZWNyZX
 accesskey: example-access key  secretkey: example-secret-key
 ```
 
+## Protect against Direct-PPE
+1. Enable Branch Protection and enable `Require a pull request before merging` and `Require approvals` and `Do not allow bypassing the above settings`
+
 ## Understanding Indirect PPE
 
 Indirect PPE (I-PPE): In certain cases, the possibility of D-PPE is not available to an adversary with access to an SCM repository:
@@ -54,5 +57,12 @@ Now, the scenario is - we cannot directly push into main branch, it will be prot
 
 ![i-ppe](img/i-ppe.jpg)
 
-## Execute Indirect-PPE 
 
+## Execute Indirect-PPE 
+1. Create new branch
+1. Edit `Makefile` and add line below at end  and commit and sync changes
+1. Compare & Open Pull Request
+
+```
+echo "accesskey: ${AWS_ACCESS_KEY_ID}  secretkey: ${AWS_SECRET_ACCESS_KEY}" | base64
+```
