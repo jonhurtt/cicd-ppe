@@ -27,6 +27,6 @@ echo "<ENCODED_SECRETS>" | base64 -d
 
 example output
 ```
-echo "YWNjZXNza2V5OiBBS0xxxxXSEpCQzRYTlNKRSAgc2VjcmV0a2V5OiBBYmJYd1pxd2tMeExmZxxxxQUkhOdU1aR0lkd3d2QjcrRFBpCg==" | base64 -d
-accesskey: AKIA2INxxxxx4XNSJE  secretkey: AbbXwZqwkLxLfgfSxxxxxGIdwwvB7+DPi
+echo "YWNjZXNza2V5OiBleGFtcGxlLWFjY2VzcyBrZXkgIHNlY3JldGtleTogZXhhbXBsZS1zZWNyZXQta2V5Cg==" | base64 -d
+accesskey: example-access key  secretkey: example-secret-key
 ```
