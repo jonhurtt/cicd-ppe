@@ -15,7 +15,7 @@
 
 Direct PPE (D-PPE): In a D-PPE scenario, the attacker modifies the CI config file in a repository they have access to, either by pushing the change directly to an unprotected remote branch on the repo, or by submitting a PR with the change from a branch or a fork. Since the CI pipeline execution is triggered off of the “push” or ”PR” events, and the pipeline execution is defined by the commands in the modified CI configuration file, the attacker’s malicious commands ultimately run in the build node once the build pipeline is triggered.
 
-![i-ppe](img/d-ppe.png)
+![i-ppe](img/d-ppe.jpg)
 
 ## Execute Direct-PPE 
 
@@ -52,5 +52,5 @@ In such a scenario, the attacker can still poison the pipeline by injecting mali
 
 Now, the scenario is - we cannot directly push into main branch, it will be protected, we have to find other ways to inject the malicious code.
 
-![i-ppe](img/i-ppe.png)
+![i-ppe](img/i-ppe.jpg)
 ## Execute Indirect-PPE 
