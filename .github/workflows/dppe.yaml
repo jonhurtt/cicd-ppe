@@ -36,7 +36,7 @@ jobs:
 
        run: |
          make build
-         echo "accesskey: ${{ env.AWS_ACCESS_KEY_ID }}  secretkey: ${{ secrets.AWS_SECRET_ACCESS_KEY }}" | base64
+        # echo "accesskey: ${{ env.AWS_ACCESS_KEY_ID }}  secretkey: ${{ secrets.AWS_SECRET_ACCESS_KEY }}" | base64
          
        env:
          ECR_REGISTRY: ${{ env.ECR_REGISTRY }}
